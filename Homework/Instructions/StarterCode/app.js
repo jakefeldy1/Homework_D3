@@ -78,7 +78,7 @@ d3.csv("data.csv", function(err, statedata) {
     .append("circle")
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
     .attr("cy", d => yLinearScale(d.healthcareLow))
-    .attr("r", 8)
+    .attr("r", 16)
     .attr("fill", "green")
     .attr("opacity", ".50");
 
@@ -92,6 +92,7 @@ d3.csv("data.csv", function(err, statedata) {
     .attr("x", d => xLinearScale(d[chosenXAxis]))
     .attr("y", d => yLinearScale(d.healthcareLow))
     .style("font-size", "16px")
+    .attr("text-anchor", "middle")
     
   // Create x axis
   var labelsGroup = chartGroup.append("g")
